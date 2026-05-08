@@ -413,6 +413,38 @@ const SITE = {
     );
   }
 
+  /* IMAGE SLOTS */
+  .service-card-image {
+    aspect-ratio: 16/9;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    margin: -2.75rem -2.75rem 2rem;
+  }
+
+  .process-step-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .step-image {
+    aspect-ratio: 4/3;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonial-photo {
+    width: 72px;
+    height: 72px;
+    background: var(--bg-alt);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+  }
+
   /* SERVICES */
   .services-grid {
     display: grid;
@@ -662,16 +694,35 @@ const SITE = {
   }
 
   /* SCROLL REVEAL */
-  .reveal {
+  .reveal-up {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(40px);
+    transition: opacity 0.85s ease, transform 0.85s ease;
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.85s ease, transform 0.85s ease;
   }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.85s ease, transform 0.85s ease;
+  }
+
+  .reveal-up.visible,
+  .reveal-left.visible,
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .delay-1 { transition-delay: 0.12s; }
+  .delay-2 { transition-delay: 0.24s; }
+  .delay-3 { transition-delay: 0.36s; }
+  .delay-4 { transition-delay: 0.48s; }
 
   /* MOBILE */
   @media (max-width: 768px) {
@@ -721,6 +772,10 @@ const SITE = {
       padding: 2rem 1.5rem;
       min-height: auto;
     }
+
+    .process-step-inner { grid-template-columns: 1fr; }
+
+    .service-card-image { margin: -2rem -1.5rem 1.5rem; }
 
     .testimonial { padding-left: 1.25rem; }
     .testimonial blockquote { font-size: 1.05rem; }
@@ -773,16 +828,16 @@ const SITE = {
   </div>
 </header>
 
-<section id="philosophy" class="reveal">
-  <div class="section-label">01 / Philosophy</div>
+<section id="philosophy">
+  <div class="section-label reveal-up">01 / Philosophy</div>
   <div class="philosophy">
-    <div class="philosophy-text">
+    <div class="philosophy-text reveal-left">
       <h2 id="philosophyHeading"></h2>
       <p id="philosophyParagraph1"></p>
       <p id="philosophyParagraph2"></p>
       <p id="philosophyParagraph3"></p>
     </div>
-    <div class="philosophy-image">
+    <div class="philosophy-image reveal-right">
       <div class="image-placeholder">
         IMAGE 01<br/><br/>
         Portrait of Brandon<br/>
@@ -793,29 +848,33 @@ const SITE = {
   </div>
 </section>
 
-<section id="services" class="reveal">
-  <div class="section-label">02 / Services</div>
-  <h2 class="section-headline" id="servicesHeading"></h2>
+<section id="services">
+  <div class="section-label reveal-up">02 / Services</div>
+  <h2 class="section-headline reveal-up delay-1" id="servicesHeading"></h2>
   <div class="services-grid">
-    <div class="service-card">
+    <div class="service-card reveal-up delay-1">
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>Trial Session</div></div>
       <h3 id="service1Title"></h3>
       <div class="price" id="service1Price"></div>
       <p id="service1Desc"></p>
       <div class="pack-detail" id="service1Detail"></div>
     </div>
-    <div class="service-card">
+    <div class="service-card reveal-up delay-2">
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>5-Session Pack</div></div>
       <h3 id="service2Title"></h3>
       <div class="price" id="service2Price"></div>
       <p id="service2Desc"></p>
       <div class="pack-detail" id="service2Detail"></div>
     </div>
-    <div class="service-card">
+    <div class="service-card reveal-up delay-3">
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>10-Session Pack</div></div>
       <h3 id="service3Title"></h3>
       <div class="price" id="service3Price"></div>
       <p id="service3Desc"></p>
       <div class="pack-detail" id="service3Detail"></div>
     </div>
-    <div class="service-card">
+    <div class="service-card reveal-up delay-4">
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>Online Coaching</div></div>
       <h3 id="service4Title"></h3>
       <div class="price" id="service4Price"></div>
       <p id="service4Desc"></p>
@@ -824,54 +883,86 @@ const SITE = {
   </div>
 </section>
 
-<section id="process" class="process-section reveal" style="max-width:none;">
+<section id="process" class="process-section" style="max-width:none;">
   <div class="process-inner">
-    <div class="section-label">03 / Process</div>
-    <h2 class="section-headline" id="processHeading"></h2>
-    <p class="process-intro" id="processIntro"></p>
+    <div class="section-label reveal-up">03 / Process</div>
+    <h2 class="section-headline reveal-up delay-1" id="processHeading"></h2>
+    <p class="process-intro reveal-up delay-2" id="processIntro"></p>
     <div class="process-grid">
-      <div class="process-step">
-        <div class="number" id="process1Number"></div>
-        <h3 id="process1Title"></h3>
-        <p id="process1Body"></p>
+      <div class="process-step reveal-up delay-1">
+        <div class="process-step-inner">
+          <div class="process-step-content">
+            <div class="number" id="process1Number"></div>
+            <h3 id="process1Title"></h3>
+            <p id="process1Body"></p>
+          </div>
+          <div class="step-image">
+            <div class="image-placeholder">IMAGE 03A<br/>Movement Assessment<br/>Action shot</div>
+          </div>
+        </div>
       </div>
-      <div class="process-step">
-        <div class="number" id="process2Number"></div>
-        <h3 id="process2Title"></h3>
-        <p id="process2Body"></p>
+      <div class="process-step reveal-up delay-2">
+        <div class="process-step-inner">
+          <div class="process-step-content">
+            <div class="number" id="process2Number"></div>
+            <h3 id="process2Title"></h3>
+            <p id="process2Body"></p>
+          </div>
+          <div class="step-image">
+            <div class="image-placeholder">IMAGE 03B<br/>Pain Management<br/>Corrective work</div>
+          </div>
+        </div>
       </div>
-      <div class="process-step">
-        <div class="number" id="process3Number"></div>
-        <h3 id="process3Title"></h3>
-        <p id="process3Body"></p>
+      <div class="process-step reveal-up delay-3">
+        <div class="process-step-inner">
+          <div class="process-step-content">
+            <div class="number" id="process3Number"></div>
+            <h3 id="process3Title"></h3>
+            <p id="process3Body"></p>
+          </div>
+          <div class="step-image">
+            <div class="image-placeholder">IMAGE 03C<br/>Movement Quality<br/>Form coaching</div>
+          </div>
+        </div>
       </div>
-      <div class="process-step">
-        <div class="number" id="process4Number"></div>
-        <h3 id="process4Title"></h3>
-        <p id="process4Body"></p>
+      <div class="process-step reveal-up delay-4">
+        <div class="process-step-inner">
+          <div class="process-step-content">
+            <div class="number" id="process4Number"></div>
+            <h3 id="process4Title"></h3>
+            <p id="process4Body"></p>
+          </div>
+          <div class="step-image">
+            <div class="image-placeholder">IMAGE 03D<br/>Performance<br/>Training hard</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="testimonials" class="testimonials reveal" style="max-width:none;">
+<section id="testimonials" class="testimonials" style="max-width:none;">
   <div class="testimonials-inner">
-    <div class="section-label">04 / Clients</div>
-    <h2 class="section-headline" id="testimonialsHeading"></h2>
+    <div class="section-label reveal-up">04 / Clients</div>
+    <h2 class="section-headline reveal-up delay-1" id="testimonialsHeading"></h2>
     <div class="testimonial-grid">
-      <div class="testimonial">
+      <div class="testimonial reveal-up delay-1">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
         <blockquote id="testimonial1Quote"></blockquote>
         <cite id="testimonial1Cite"></cite>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-up delay-2">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
         <blockquote id="testimonial2Quote"></blockquote>
         <cite id="testimonial2Cite"></cite>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-up delay-3">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
         <blockquote id="testimonial3Quote"></blockquote>
         <cite id="testimonial3Cite"></cite>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-up delay-4">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
         <blockquote id="testimonial4Quote"></blockquote>
         <cite id="testimonial4Cite"></cite>
       </div>
@@ -879,11 +970,11 @@ const SITE = {
   </div>
 </section>
 
-<section class="reveal">
-  <div class="section-label">05 / Credentials</div>
+<section>
+  <div class="section-label reveal-up">05 / Credentials</div>
   <div class="creds">
-    <h2 class="section-headline" id="credsHeading"></h2>
-    <ul class="creds-list">
+    <h2 class="section-headline reveal-up delay-1" id="credsHeading"></h2>
+    <ul class="creds-list reveal-up delay-2">
       <li><span id="cred1Name"></span><span id="cred1Status"></span></li>
       <li><span id="cred2Name"></span><span id="cred2Status"></span></li>
       <li><span id="cred3Name"></span><span id="cred3Status"></span></li>
@@ -891,19 +982,19 @@ const SITE = {
   </div>
 </section>
 
-<section id="contact" class="contact reveal">
-  <div class="section-label">06 / Begin</div>
-  <h2 id="contactHeading"></h2>
+<section id="contact" class="contact">
+  <div class="section-label reveal-up">06 / Begin</div>
+  <h2 class="reveal-up delay-1" id="contactHeading"></h2>
   <div class="contact-methods">
-    <div class="contact-method">
+    <div class="contact-method reveal-up delay-2">
       <div class="label">WhatsApp</div>
       <a id="whatsappLink"></a>
     </div>
-    <div class="contact-method">
+    <div class="contact-method reveal-up delay-3">
       <div class="label">Instagram</div>
       <a id="instagramLink" target="_blank"></a>
     </div>
-    <div class="contact-method">
+    <div class="contact-method reveal-up delay-4">
       <div class="label">Location</div>
       <a id="locationText"></a>
     </div>
@@ -994,7 +1085,7 @@ const SITE = {
       if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 </script>
 
 </body>
