@@ -37,25 +37,25 @@ const SITE = {
   philosophyParagraph3: "As your trainer, you have my word that I will help you not only get into your desired shape, but do it such that the other areas of your life need not be compromised significantly.",
 
   // ----- ABOUT / PROCESS PAGE -----
-  processHeading: "How the work",
-  processHeadingItalic: "actually unfolds.",
-  processIntro: "Every programme is written ground up for the individual. No templates, no copy-paste plans. Here is how we move through it together.",
+  processHeading: "How the magic",
+  processHeadingItalic: "happens.",
+  processIntro: "Every programme is written from scratch with information from trials.",
 
   process1Number: "01",
-  process1Title: "Movement Assessment",
-  process1Body: "We start by understanding what your body can and cannot do right now. Joint mobility, postural patterns, movement compensations, history of injuries. This is the foundation. Without it, everything we build later sits on sand.",
+  process1Title: "Can you move?",
+  process1Body: "We start by understanding what your body can and cannot do right now. Joint mobility, postural patterns, movement compensations, history of injuries.",
 
   process2Number: "02",
-  process2Title: "Address the Pain",
-  process2Body: "If something hurts, we sort it before we add load. Targeted corrective work, mobility drills, and gradual loading of the painful tissue restore confidence in the body. You should not be paying me to make existing pain worse.",
+  process2Title: "Does it hurt when you do this?",
+  process2Body: "If something hurts, we sort it before we add load. If you're paying me, you best be living better for it.",
 
   process3Number: "03",
-  process3Title: "Build the Movement",
-  process3Body: "Once pain is managed, we focus on moving well. Squat, hinge, push, pull, carry. Quality first, weight second. Most people skip this step and pay for it later. We do not.",
+  process3Title: "How well can you do this?",
+  process3Body: "Once the pain is managed, we will focus on movement quality.",
 
   process4Number: "04",
-  process4Title: "Drive Performance",
-  process4Body: "Now you can train hard. Strength, conditioning, and progression toward your specific goals. Whether that is being able to play with your kids, hike a mountain, or hit a number in the gym. This is the fun part, and you have earned it.",
+  process4Title: "How hard and fast can you do this?",
+  process4Body: "At this point you have earned the right to train hard. This is where the fun part is!",
 
   // ----- BOOK NOW PAGE -----
   // servicesOverview: describe what you offer across the board.
@@ -67,19 +67,19 @@ const SITE = {
   servicesHeadingItalic: "fits your life.",
 
   service1Title: "Trial Session",
-  service1Price: "Complimentary",
-  service1Desc: "A first session to understand your goals, run baseline assessments, and try a workout together. No commitment. You leave knowing whether we are a fit.",
+  service1Price: "$20",
+  service1Desc: "A first session to conduct assessments, try a workout together, and for you to see if you like how I run things.",
   service1Detail: "",
 
-  service2Title: "5-Session Pack",
-  service2Price: "SGD 280 / $56 per session",
-  service2Desc: "In-person training at ActiveSG. For those building consistency. Valid for 6 weeks.",
-  service2Detail: "Programme design / Form correction / Progress tracking",
+  service2Title: "4-Session Pack",
+  service2Price: "SGD 360 / $90 per 1.5 hour session",
+  service2Desc: "In-person training at ActiveSG, or any private gym. Recommended for new clients. Valid for 6 weeks.",
+  service2Detail: "",
 
-  service3Title: "10-Session Pack",
-  service3Price: "SGD 540 / $54 per session",
-  service3Desc: "For clients who want sustained, structured progression. Valid for 12 weeks.",
-  service3Detail: "Includes nutrition guidance / Recovery protocols / Priority booking",
+  service3Title: "8-Session Pack",
+  service3Price: "SGD 640 / $80 per session",
+  service3Desc: "In-person training at ActiveSG, or any private gym. Recommended for those with more certainty. Valid for 12 weeks.",
+  service3Detail: "",
 
   service4Title: "Online Coaching",
   service4Price: "SGD 100 per month",
@@ -91,34 +91,34 @@ const SITE = {
   testimonialsHeadingItalic: "their words.",
 
   testimonial1Quote: "The experience has been transformational for my own physical health. Brandon took the time to understand my goals and created a structured plan that was effective, sustainable, and enjoyable. I've lost 18 kg, gained noticeable strength, and built a better relationship with my body.",
-  testimonial1Cite: "Steven, 8 months",
+  testimonial1Cite: "Steven, 23, beginner in the gym",
 
   testimonial2Quote: "He demonstrates a nuanced understanding of the female body and approaches each session with professionalism. He pushes me to make meaningful progress while remaining aware of my individual limits. His thoughtful approach has had real impact on my physical strength and overall quality of life.",
-  testimonial2Cite: "Ana, female client",
+  testimonial2Cite: "Ana, 20, beginner in the gym",
 
   testimonial3Quote: "He spent 20 minutes correcting the little flaws in my deadlift form, focused on where I could improve rather than just pointing out everything I was doing wrong. Even when injuries or life got in the way, he always checked in. He genuinely cares about his clients.",
-  testimonial3Cite: "Hemant, 3 months",
+  testimonial3Cite: "Hemant, 21, novice in the gym",
 
   testimonial4Quote: "Brandon is super invested in each of his clients and genuinely wants to help them achieve their goals. I used to dread going to the gym because I didn't know what I was doing. With Brandon, it's become second nature.",
-  testimonial4Cite: "Alex, current client",
+  testimonial4Cite: "Alex, 21, Climber and ex Water Polo athlete",
 
   credsHeading: "Qualified.",
   credsHeadingItalic: "Always learning.",
   cred1Name: "ACE Certified Personal Trainer",
   cred1Status: "Current",
   cred2Name: "Strength Systems Certification",
-  cred2Status: "In Progress",
+  cred2Status: "To be confirmed",
   cred3Name: "Specialisation, Training the Elderly",
-  cred3Status: "Planned",
+  cred3Status: "To be confirmed",
 
   // ----- CONTACT (appears on every page) -----
-  contactHeading: "Send a text.",
-  contactHeadingItalic: "The first session is on me.",
+  contactHeading: "Drop me a text.",
+  contactHeadingItalic: "Shall we begin?",
   whatsappNumber: "+65 8950 8470",
   whatsappLink: "https://wa.me/6589508470",
   instagramHandle: "@dogs_are_very_neat",
   instagramLink: "https://instagram.com/dogs_are_very_neat",
-  locationText: "ActiveSG / Online",
+  locationText: "ActiveSG / Private gym / Online",
 
   // ----- FOOTER -----
   footerLeft: "F/F — Brandon Zhao Yi",
