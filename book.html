@@ -46,22 +46,25 @@
       <div class="price" id="service1Price"></div>
       <p id="service1Desc"></p>
       <div class="pack-detail" id="service1Detail"></div>
+      <div id="service1Book"></div>
     </div>
 
     <div class="service-card reveal-up delay-2">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>5-Session Pack</div></div>
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>4-Session Pack</div></div>
       <h3 id="service2Title"></h3>
       <div class="price" id="service2Price"></div>
       <p id="service2Desc"></p>
       <div class="pack-detail" id="service2Detail"></div>
+      <div id="service2Book"></div>
     </div>
 
     <div class="service-card reveal-up delay-3">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>10-Session Pack</div></div>
+      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>8-Session Pack</div></div>
       <h3 id="service3Title"></h3>
       <div class="price" id="service3Price"></div>
       <p id="service3Desc"></p>
       <div class="pack-detail" id="service3Detail"></div>
+      <div id="service3Book"></div>
     </div>
 
     <div class="service-card reveal-up delay-4">
@@ -70,6 +73,7 @@
       <div class="price" id="service4Price"></div>
       <p id="service4Desc"></p>
       <div class="pack-detail" id="service4Detail"></div>
+      <div id="service4Book"></div>
     </div>
 
   </div>
@@ -116,7 +120,8 @@
 
   setHTML('servicesHeading', SITE.servicesHeading + ' <em>' + SITE.servicesHeadingItalic + '</em>');
 
-  // Inject service cards with detail as bullet list
+  // Inject service cards with detail as bullet list and booking button
+  var bookLabels = ['Book Trial Session', 'Book 4-Session Pack', 'Book 8-Session Pack', 'Start Online Coaching'];
   for (var i = 1; i <= 4; i++) {
     setText('service' + i + 'Title', SITE['service' + i + 'Title']);
     setText('service' + i + 'Price', SITE['service' + i + 'Price']);
@@ -133,6 +138,13 @@
       } else {
         detailEl.style.display = 'none';
       }
+    }
+
+    var bookEl = document.getElementById('service' + i + 'Book');
+    if (bookEl) {
+      var msg = encodeURIComponent("Hi Brandon, I'd like to enquire about the " + SITE['service' + i + 'Title'] + '.');
+      var waBase = SITE.whatsappLink.replace(/^https:\/\/wa\.me\//, 'https://wa.me/');
+      bookEl.innerHTML = '<a class="btn-book" href="' + waBase + '?text=' + msg + '" target="_blank">' + bookLabels[i - 1] + '</a>';
     }
   }
 
