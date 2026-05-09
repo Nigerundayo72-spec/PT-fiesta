@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Testimonials — F/F | Brandon Zhao Yi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="testimonials">
+
+<nav>
+  <a href="index.html" class="logo" id="logo"></a>
+  <ul class="nav-links">
+    <li><a href="about.html" data-nav="about">About</a></li>
+    <li><a href="book.html" data-nav="book">Book Now</a></li>
+    <li><a href="testimonials.html" data-nav="testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label reveal-up">Testimonials</div>
+  <h1 class="reveal-up delay-1">The work, in <em>their words.</em></h1>
+</div>
+
+<section id="testimonials" class="testimonials" style="max-width:none;">
+  <div class="testimonials-inner">
+    <div class="section-label reveal-up">Clients</div>
+    <h2 class="section-headline reveal-up delay-1" id="testimonialsHeading"></h2>
+    <div class="testimonial-grid">
+
+      <div class="testimonial reveal-up delay-1">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
+        <blockquote id="testimonial1Quote"></blockquote>
+        <cite id="testimonial1Cite"></cite>
+      </div>
+
+      <div class="testimonial reveal-up delay-2">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
+        <blockquote id="testimonial2Quote"></blockquote>
+        <cite id="testimonial2Cite"></cite>
+      </div>
+
+      <div class="testimonial reveal-up delay-3">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
+        <blockquote id="testimonial3Quote"></blockquote>
+        <cite id="testimonial3Cite"></cite>
+      </div>
+
+      <div class="testimonial reveal-up delay-4">
+        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
+        <blockquote id="testimonial4Quote"></blockquote>
+        <cite id="testimonial4Cite"></cite>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label reveal-up">Credentials</div>
+  <div class="creds">
+    <h2 class="section-headline reveal-up delay-1" id="credsHeading"></h2>
+    <ul class="creds-list reveal-up delay-2">
+      <li><span id="cred1Name"></span><span id="cred1Status"></span></li>
+      <li><span id="cred2Name"></span><span id="cred2Status"></span></li>
+      <li><span id="cred3Name"></span><span id="cred3Status"></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-label reveal-up">Begin</div>
+  <h2 class="reveal-up delay-1" id="contactHeading"></h2>
+  <div class="contact-methods">
+    <div class="contact-method reveal-up delay-2">
+      <div class="label">WhatsApp</div>
+      <a id="whatsappLink"></a>
+    </div>
+    <div class="contact-method reveal-up delay-3">
+      <div class="label">Instagram</div>
+      <a id="instagramLink" target="_blank"></a>
+    </div>
+    <div class="contact-method reveal-up delay-4">
+      <div class="label">Location</div>
+      <a id="locationText"></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div id="footerLeft"></div>
+  <div id="footerRight"></div>
+</footer>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+  initCommon();
+
+  setHTML('testimonialsHeading', SITE.testimonialsHeading + ' <em>' + SITE.testimonialsHeadingItalic + '</em>');
+  for (var i = 1; i <= 4; i++) {
+    setText('testimonial' + i + 'Quote', SITE['testimonial' + i + 'Quote']);
+    setText('testimonial' + i + 'Cite', SITE['testimonial' + i + 'Cite']);
+  }
+
+  setHTML('credsHeading', SITE.credsHeading + ' <em>' + SITE.credsHeadingItalic + '</em>');
+  setText('cred1Name', SITE.cred1Name);
+  setText('cred1Status', SITE.cred1Status);
+  setText('cred2Name', SITE.cred2Name);
+  setText('cred2Status', SITE.cred2Status);
+  setText('cred3Name', SITE.cred3Name);
+  setText('cred3Status', SITE.cred3Status);
+
+  initReveal();
+</script>
+
+</body>
+</html>

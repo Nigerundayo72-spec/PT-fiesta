@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -9,800 +8,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 
 <!--
-============================================================================
-HOW TO EDIT THIS WEBSITE — READ THIS FIRST
-============================================================================
-
-You do NOT need GitHub. You do NOT need to know code.
-
-To edit any text on this site:
-
-1. Open this file in any text editor (Notes, TextEdit, Notepad,
-   or even just open it in iPad Files app and tap "Open in...")
-2. Scroll down to the section called "TEXT CONTENT"
-3. Change the words BETWEEN the quotation marks. Do NOT touch
-   anything outside the quotation marks.
-4. Save the file.
-5. Re-open the file in your browser to see the changes.
-
-Example:
-   tagline: "Old text here"
-   Change to:
-   tagline: "Your new text here"
-
-That is it. The rest of the file is just styling that makes
-everything look pretty. You never need to touch it.
-
-============================================================================
+  TO EDIT TEXT ON THIS SITE: open data.js in any text editor.
+  Change the words inside the quotation marks, save, and refresh.
 -->
-
-<script>
-// ============================================================================
-// TEXT CONTENT — EDIT EVERYTHING HERE
-// ============================================================================
-// All your website text lives in this single block.
-// Change anything inside the QUOTATION MARKS.
-// Use \n for a new paragraph break in long text blocks.
-// ============================================================================
-
-const SITE = {
-
-  // ----- HERO SECTION (the landing) -----
-  brandShort: "F/F",
-  brandFull: "Form / Function",
-  metaLeft: "Form Follows Function — SG",
-  metaRight: "EST. 2024 / ACE-CPT",
-  tagline: "Personal training built around your life, not the other way around. For people who find the gym intimidating, complicated, or hard to fit in. Sustainable strength for the long road.",
-  ctaPrimary: "Book a Trial Session",
-  ctaSecondary: "Read the Philosophy",
-
-  // ----- SECTION 01: PHILOSOPHY -----
-  philosophyHeading: "My Training",
-  philosophyHeadingItalic: "Philosophy",
-  philosophyParagraph1: "What does Form Follows Function mean, and why do I believe in its significance? This concept comes from architecture, where the form of projects are built following the intended function of the building. I believe that us humans are not so different, such that our training is best structured following our individual 'functions'.",
-  philosophyParagraph2: "A grandfather training to be able to lift his granddaughter into the air would be trained very differently from a collegiate netballer who wishes to jump higher. This also means that unless your 'function' is to be a professional athlete, your training should be molded to accomodate life's other commitments, and should always be conducted with the intention of improving your quality of life.",
-  philosophyParagraph3: "As your trainer, you have my word that I will help you not only get into your desired shape, but do it such that the other areas of your life need not be compromised significantly.",
-
-  // ----- SECTION 02: SERVICES -----
-  servicesHeading: "Choose the structure that",
-  servicesHeadingItalic: "fits your life.",
-
-  service1Title: "Trial Session",
-  service1Price: "$20",
-  service1Desc: "A first session to conduct assessments, try a workout together, and for you to see if you like how I run things.",
-  service1Detail: "",
-
-  service2Title: "4-Session Pack",
-  service2Price: "SGD 360 / $90 per 1.5 hour session",
-  service2Desc: "In-person training at ActiveSG, or any private gym. Recommended for new clients. Valid for 6 weeks.",
-
-  service3Title: "8-Session Pack",
-  service3Price: "SGD 640 / $80 per session",
-  service3Desc: "In-person training at ActiveSG, or any private gym. Recommended for those with more certainty. Valid for 12 weeks.",
-
-  service4Title: "Online Coaching",
-  service4Price: "SGD 100 per month",
-  service4Desc: "Custom programming, weekly check-ins, form video reviews. For those who train independently but want expert structure and accountability.",
-  service4Detail: "Tailored programme / WhatsApp support / Monthly review call",
-
-  // ----- SECTION 03: TRAINING PROCESS (NEW) -----
-  processHeading: "How the magic happens",
-  processIntro: "Every programme is written from scratch with information from trials.",
-
-  process1Number: "01",
-  process1Title: "Can you move?",
-  process1Body: "We start by understanding what your body can and cannot do right now. Joint mobility, postural patterns, movement compensations, history of injuries.",
-
-  process2Number: "02",
-  process2Title: "Does it hurt when you do this?",
-  process2Body: "If something hurts, we sort it before we add load. If you're paying me, you best be living better for it",
-
-  process3Number: "03",
-  process3Title: "How well can you do this?",
-  process3Body: "Once the pain is managed, we will focus on movement quality. ",
-
-  process4Number: "04",
-  process4Title: "How hard and fast can you do this?",
-  process4Body: "At this point you have earned the right to train hard. This is where the fun part is! ",
-
-  // ----- SECTION 04: TESTIMONIALS -----
-  testimonialsHeading: "The work, in",
-  testimonialsHeadingItalic: "their words.",
-
-  testimonial1Quote: "The experience has been transformational for my own physical health. Brandon took the time to understand my goals and created a structured plan that was effective, sustainable, and enjoyable. I've lost 18 kg, gained noticeable strength, and built a better relationship with my body.",
-  testimonial1Cite: "Steven, 23, beginner in the gym",
-
-  testimonial2Quote: "He demonstrates a nuanced understanding of the female body and approaches each session with professionalism. He pushes me to make meaningful progress while remaining aware of my individual limits. His thoughtful approach has had real impact on my physical strength and overall quality of life.",
-  testimonial2Cite: "Ana, 20, beginner in the gym",
-
-  testimonial3Quote: "He spent 20 minutes correcting the little flaws in my deadlift form, focused on where I could improve rather than just pointing out everything I was doing wrong. Even when injuries or life got in the way, he always checked in. He genuinely cares about his clients.",
-  testimonial3Cite: "Hemant, 21, novice in the gym",
-
-  testimonial4Quote: "Brandon is super invested in each of his clients and genuinely wants to help them achieve their goals. I used to dread going to the gym because I didn't know what I was doing. With Brandon, it's become second nature.",
-  testimonial4Cite: "Alex, 21, Climber and ex Water Polo athlete",
-
-  // ----- SECTION 05: CREDENTIALS -----
-  cred1Name: "ACE Certified Personal Trainer",
-  cred1Status: "Current",
-  cred2Name: "Strength Systems Certification",
-  cred2Status: "To be confirmed",
-  cred3Name: "Specialisation, Training the Elderly",
-  cred3Status: "To be confirmed",
-
-  // ----- SECTION 06: CONTACT -----
-  contactHeading: "Drop me a text.",
-  contactHeadingItalic: "Shall we begin?",
-  whatsappNumber: "+65 8950 8470",
-  whatsappLink: "https://wa.me/6589508470",
-  instagramHandle: "@dogs_are_very_neat",
-  instagramLink: "https://instagram.com/dogs_are_very_neat",
-  locationText: "ActiveSG / Private gym / Online",
-
-  // ----- FOOTER -----
-  footerLeft: "F/F — Brandon Zhao Yi",
-  footerRight: "Singapore",
-
-};
-
-// ============================================================================
-// END OF TEXT CONTENT — DO NOT EDIT BELOW THIS LINE
-// (unless you know what you are doing)
-// ============================================================================
-</script>
-
-<style>
-  :root {
-    /* DARK PALETTE — high contrast for readability */
-    --bg: #1a1a1a;          /* deep charcoal background */
-    --bg-alt: #232323;      /* slightly lighter section break */
-    --bg-card: #1f1f1f;     /* card background */
-    --text: #f0ede6;        /* off-white main text */
-    --text-soft: #b8b3a8;   /* light grey secondary */
-    --text-muted: #888378;  /* muted accent */
-    --line: #3a3a3a;        /* dividers */
-    --highlight: #f0ede6;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-  }
-
-  /* Visible scrollbar */
-  html::-webkit-scrollbar { width: 10px; }
-  html::-webkit-scrollbar-track { background: var(--bg-alt); }
-  html::-webkit-scrollbar-thumb { background: var(--text-muted); }
-  html::-webkit-scrollbar-thumb:hover { background: var(--text-soft); }
-  html { scrollbar-width: thin; scrollbar-color: var(--text-muted) var(--bg-alt); }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    padding: 1.25rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background: rgba(26, 26, 26, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2.25rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--text-soft);
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover { color: var(--text); }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    padding: 8rem 2rem 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-  }
-
-  .hero-meta, .hero-meta-right {
-    position: absolute;
-    top: 6rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-soft);
-  }
-  .hero-meta { left: 2rem; }
-  .hero-meta-right { right: 2rem; text-align: right; }
-
-  .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 1rem 0;
-  }
-
-  .marquee-track {
-    display: inline-block;
-    animation: scroll 35s linear infinite;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(4rem, 13vw, 13rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--text);
-  }
-
-  .marquee-track span {
-    display: inline-block;
-    padding-right: 4rem;
-  }
-
-  .marquee-track .slash {
-    font-style: italic;
-    color: var(--text-soft);
-  }
-
-  @keyframes scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  .hero-tagline {
-    max-width: 560px;
-    margin-top: 2rem;
-    font-size: 1.05rem;
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  .cta-row {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 0.95rem 2rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid var(--text);
-    color: var(--text);
-    background: transparent;
-    transition: background 0.3s, color 0.3s;
-    cursor: pointer;
-    font-family: inherit;
-  }
-
-  .btn:hover { background: var(--text); color: var(--bg); }
-
-  .btn-filled {
-    background: var(--text);
-    color: var(--bg);
-  }
-
-  .btn-filled:hover { background: transparent; color: var(--text); }
-
-  /* SECTIONS */
-  section {
-    padding: 7rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--text-soft);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-label::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--text-soft);
-  }
-
-  /* PHILOSOPHY */
-  .philosophy {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .philosophy-text h2,
-  .section-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin-bottom: 2rem;
-    color: var(--text);
-  }
-
-  .philosophy-text h2 em,
-  .section-headline em {
-    font-style: italic;
-    color: var(--text-soft);
-  }
-
-  .philosophy-text p {
-    font-size: 1.05rem;
-    color: var(--text);
-    margin-bottom: 1.4rem;
-    max-width: 520px;
-    line-height: 1.7;
-  }
-
-  .philosophy-image {
-    aspect-ratio: 3/4;
-    background: var(--bg-alt);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-soft);
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 2rem;
-    background: repeating-linear-gradient(
-      45deg,
-      var(--bg-alt),
-      var(--bg-alt) 12px,
-      #2a2a2a 12px,
-      #2a2a2a 24px
-    );
-  }
-
-  /* IMAGE SLOTS */
-  .service-card-image {
-    aspect-ratio: 16/9;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-    margin: -2.75rem -2.75rem 2rem;
-  }
-
-  .process-step-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .step-image {
-    aspect-ratio: 4/3;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .testimonial-photo {
-    width: 72px;
-    height: 72px;
-    background: var(--bg-alt);
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 1.25rem;
-  }
-
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--line);
-    margin-top: 3rem;
-  }
-
-  .service-card {
-    background: var(--bg-card);
-    padding: 2.75rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 320px;
-  }
-
-  .service-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.65rem;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-  }
-
-  .service-card .price {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--text-soft);
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-  }
-
-  .service-card p {
-    color: var(--text);
-    font-size: 0.97rem;
-    margin-bottom: auto;
-    line-height: 1.7;
-  }
-
-  .service-card .pack-detail {
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    line-height: 1.8;
-  }
-
-  /* PROCESS — NEW SECTION */
-  .process-section {
-    background: var(--bg-alt);
-    padding: 7rem 2rem;
-    margin: 0;
-    max-width: none;
-  }
-
-  .process-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .process-intro {
-    font-size: 1.1rem;
-    color: var(--text);
-    max-width: 640px;
-    margin-bottom: 4rem;
-    line-height: 1.7;
-  }
-
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--line);
-  }
-
-  .process-step {
-    background: var(--bg-alt);
-    padding: 3rem 2.5rem;
-    position: relative;
-  }
-
-  .process-step .number {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: var(--text-soft);
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-  }
-
-  .process-step h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-    margin-bottom: 1.25rem;
-    color: var(--text);
-    letter-spacing: -0.01em;
-  }
-
-  .process-step p {
-    color: var(--text);
-    font-size: 0.97rem;
-    line-height: 1.75;
-  }
-
-  /* TESTIMONIALS */
-  .testimonials {
-    background: var(--bg);
-    padding: 7rem 2rem;
-    margin: 0;
-    max-width: none;
-  }
-
-  .testimonials-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3.5rem;
-    margin-top: 3rem;
-  }
-
-  .testimonial {
-    border-left: 1px solid var(--text-muted);
-    padding-left: 1.75rem;
-  }
-
-  .testimonial blockquote {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.55;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-    font-style: italic;
-  }
-
-  .testimonial cite {
-    font-style: normal;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-soft);
-  }
-
-  /* CREDENTIALS */
-  .creds {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .creds-list {
-    list-style: none;
-  }
-
-  .creds-list li {
-    padding: 1.4rem 0;
-    border-bottom: 1px solid var(--line);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    font-size: 0.97rem;
-    color: var(--text);
-  }
-
-  .creds-list li span:last-child {
-    color: var(--text-soft);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    flex-shrink: 0;
-  }
-
-  /* CONTACT */
-  .contact {
-    text-align: left;
-    padding: 9rem 2rem;
-  }
-
-  .contact h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(2.3rem, 5.5vw, 4.5rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 3rem;
-    max-width: 900px;
-    color: var(--text);
-  }
-
-  .contact h2 em {
-    font-style: italic;
-    color: var(--text-soft);
-  }
-
-  .contact-methods {
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-  }
-
-  .contact-method {
-    border-top: 1px solid var(--text);
-    padding-top: 1rem;
-    min-width: 200px;
-  }
-
-  .contact-method .label {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-soft);
-    margin-bottom: 0.5rem;
-  }
-
-  .contact-method a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: var(--text);
-    text-decoration: none;
-    transition: opacity 0.3s;
-  }
-
-  .contact-method a:hover { opacity: 0.6; }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-soft);
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  /* SCROLL REVEAL */
-  .reveal-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.85s ease, transform 0.85s ease;
-  }
-
-  .reveal-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.85s ease, transform 0.85s ease;
-  }
-
-  .reveal-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.85s ease, transform 0.85s ease;
-  }
-
-  .reveal-up.visible,
-  .reveal-left.visible,
-  .reveal-right.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  .delay-1 { transition-delay: 0.12s; }
-  .delay-2 { transition-delay: 0.24s; }
-  .delay-3 { transition-delay: 0.36s; }
-  .delay-4 { transition-delay: 0.48s; }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    body { font-size: 15px; }
-
-    nav { padding: 1rem 1.25rem; }
-    .logo { font-size: 1.3rem; }
-    .nav-links { gap: 1.25rem; }
-    .nav-links a { font-size: 0.7rem; letter-spacing: 0.08em; }
-    .nav-links li:nth-child(3) { display: none; }
-
-    .hero {
-      padding: 7rem 1.25rem 3rem;
-      min-height: auto;
-    }
-    .hero-meta, .hero-meta-right {
-      position: static;
-      margin-bottom: 0.5rem;
-      font-size: 0.65rem;
-      text-align: left;
-    }
-    .hero-meta-right { margin-bottom: 1.5rem; }
-
-    .marquee-track { font-size: clamp(3rem, 18vw, 6rem); }
-    .marquee-track span { padding-right: 2rem; }
-
-    .hero-tagline { font-size: 1rem; margin-top: 1.5rem; }
-
-    .cta-row { flex-direction: column; gap: 0.75rem; }
-    .btn { width: 100%; text-align: center; padding: 1rem; }
-
-    section { padding: 4.5rem 1.25rem; }
-    .testimonials, .process-section { padding: 4.5rem 1.25rem; }
-    .contact { padding: 5rem 1.25rem; }
-
-    .philosophy,
-    .services-grid,
-    .process-grid,
-    .testimonial-grid,
-    .creds {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .services-grid, .process-grid { gap: 1px; }
-    .service-card, .process-step {
-      padding: 2rem 1.5rem;
-      min-height: auto;
-    }
-
-    .process-step-inner { grid-template-columns: 1fr; }
-
-    .service-card-image { margin: -2rem -1.5rem 1.5rem; }
-
-    .testimonial { padding-left: 1.25rem; }
-    .testimonial blockquote { font-size: 1.05rem; }
-
-    .contact-methods { flex-direction: column; gap: 1.5rem; }
-    .contact-method { width: 100%; }
-    .contact-method a { font-size: 1.2rem; }
-
-    .creds-list li {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.4rem;
-    }
-
-    footer { flex-direction: column; text-align: center; }
-  }
-
-  @media (max-width: 380px) {
-    .nav-links li:nth-child(2) { display: none; }
-  }
-</style>
-
 </head>
-<body>
+<body data-page="home">
 
 <nav>
-  <a href="#" class="logo" id="logo"></a>
+  <a href="index.html" class="logo" id="logo"></a>
   <ul class="nav-links">
-    <li><a href="#philosophy">Philosophy</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="about.html" data-nav="about">About</a></li>
+    <li><a href="book.html" data-nav="book">Book Now</a></li>
+    <li><a href="testimonials.html" data-nav="testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -818,13 +38,13 @@ const SITE = {
   <p class="hero-tagline" id="tagline"></p>
 
   <div class="cta-row">
-    <a href="#contact" class="btn btn-filled" id="ctaPrimary"></a>
+    <a href="book.html" class="btn btn-filled" id="ctaPrimary"></a>
     <a href="#philosophy" class="btn" id="ctaSecondary"></a>
   </div>
 </header>
 
 <section id="philosophy">
-  <div class="section-label reveal-up">01 / Philosophy</div>
+  <div class="section-label reveal-up">Philosophy</div>
   <div class="philosophy">
     <div class="philosophy-text reveal-left">
       <h2 id="philosophyHeading"></h2>
@@ -843,142 +63,42 @@ const SITE = {
   </div>
 </section>
 
-<section id="services">
-  <div class="section-label reveal-up">02 / Services</div>
-  <h2 class="section-headline reveal-up delay-1" id="servicesHeading"></h2>
-  <div class="services-grid">
-    <div class="service-card reveal-up delay-1">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>Trial Session</div></div>
-      <h3 id="service1Title"></h3>
-      <div class="price" id="service1Price"></div>
-      <p id="service1Desc"></p>
-      <div class="pack-detail" id="service1Detail"></div>
-    </div>
-    <div class="service-card reveal-up delay-2">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>5-Session Pack</div></div>
-      <h3 id="service2Title"></h3>
-      <div class="price" id="service2Price"></div>
-      <p id="service2Desc"></p>
-      <div class="pack-detail" id="service2Detail"></div>
-    </div>
-    <div class="service-card reveal-up delay-3">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>10-Session Pack</div></div>
-      <h3 id="service3Title"></h3>
-      <div class="price" id="service3Price"></div>
-      <p id="service3Desc"></p>
-      <div class="pack-detail" id="service3Detail"></div>
-    </div>
-    <div class="service-card reveal-up delay-4">
-      <div class="service-card-image"><div class="image-placeholder">IMAGE<br/>Online Coaching</div></div>
-      <h3 id="service4Title"></h3>
-      <div class="price" id="service4Price"></div>
-      <p id="service4Desc"></p>
-      <div class="pack-detail" id="service4Detail"></div>
-    </div>
-  </div>
-</section>
+<!-- Navigation cards — triangle layout: Book Now top, About + Testimonials below -->
+<div class="nav-cards-section">
+  <div class="nav-cards">
 
-<section id="process" class="process-section" style="max-width:none;">
-  <div class="process-inner">
-    <div class="section-label reveal-up">03 / Process</div>
-    <h2 class="section-headline reveal-up delay-1" id="processHeading"></h2>
-    <p class="process-intro reveal-up delay-2" id="processIntro"></p>
-    <div class="process-grid">
-      <div class="process-step reveal-up delay-1">
-        <div class="process-step-inner">
-          <div class="process-step-content">
-            <div class="number" id="process1Number"></div>
-            <h3 id="process1Title"></h3>
-            <p id="process1Body"></p>
-          </div>
-          <div class="step-image">
-            <div class="image-placeholder">IMAGE 03A<br/>Movement Assessment<br/>Action shot</div>
-          </div>
-        </div>
+    <a href="book.html" class="nav-card nav-card--top reveal-up">
+      <span class="nav-card-arrow">→</span>
+      <div class="nav-card-label">Book Now</div>
+      <div class="nav-card-title">Sessions, packs,<br/><em style="font-style:italic;color:var(--text-soft)">online coaching.</em></div>
+      <div class="nav-card-overlay">
+        <p>Select your package structure and see what's included.</p>
       </div>
-      <div class="process-step reveal-up delay-2">
-        <div class="process-step-inner">
-          <div class="process-step-content">
-            <div class="number" id="process2Number"></div>
-            <h3 id="process2Title"></h3>
-            <p id="process2Body"></p>
-          </div>
-          <div class="step-image">
-            <div class="image-placeholder">IMAGE 03B<br/>Pain Management<br/>Corrective work</div>
-          </div>
-        </div>
-      </div>
-      <div class="process-step reveal-up delay-3">
-        <div class="process-step-inner">
-          <div class="process-step-content">
-            <div class="number" id="process3Number"></div>
-            <h3 id="process3Title"></h3>
-            <p id="process3Body"></p>
-          </div>
-          <div class="step-image">
-            <div class="image-placeholder">IMAGE 03C<br/>Movement Quality<br/>Form coaching</div>
-          </div>
-        </div>
-      </div>
-      <div class="process-step reveal-up delay-4">
-        <div class="process-step-inner">
-          <div class="process-step-content">
-            <div class="number" id="process4Number"></div>
-            <h3 id="process4Title"></h3>
-            <p id="process4Body"></p>
-          </div>
-          <div class="step-image">
-            <div class="image-placeholder">IMAGE 03D<br/>Performance<br/>Training hard</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </a>
 
-<section id="testimonials" class="testimonials" style="max-width:none;">
-  <div class="testimonials-inner">
-    <div class="section-label reveal-up">04 / Clients</div>
-    <h2 class="section-headline reveal-up delay-1" id="testimonialsHeading"></h2>
-    <div class="testimonial-grid">
-      <div class="testimonial reveal-up delay-1">
-        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
-        <blockquote id="testimonial1Quote"></blockquote>
-        <cite id="testimonial1Cite"></cite>
+    <a href="about.html" class="nav-card reveal-up delay-1">
+      <span class="nav-card-arrow">→</span>
+      <div class="nav-card-label">About Me</div>
+      <div class="nav-card-title">The work<br/><em style="font-style:italic;color:var(--text-soft)">behind the work.</em></div>
+      <div class="nav-card-overlay">
+        <p>Get to know me as a person, not just a trainer.</p>
       </div>
-      <div class="testimonial reveal-up delay-2">
-        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
-        <blockquote id="testimonial2Quote"></blockquote>
-        <cite id="testimonial2Cite"></cite>
-      </div>
-      <div class="testimonial reveal-up delay-3">
-        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
-        <blockquote id="testimonial3Quote"></blockquote>
-        <cite id="testimonial3Cite"></cite>
-      </div>
-      <div class="testimonial reveal-up delay-4">
-        <div class="testimonial-photo"><div class="image-placeholder">CLIENT PHOTO</div></div>
-        <blockquote id="testimonial4Quote"></blockquote>
-        <cite id="testimonial4Cite"></cite>
-      </div>
-    </div>
-  </div>
-</section>
+    </a>
 
-<section>
-  <div class="section-label reveal-up">05 / Credentials</div>
-  <div class="creds">
-    <h2 class="section-headline reveal-up delay-1" id="credsHeading"></h2>
-    <ul class="creds-list reveal-up delay-2">
-      <li><span id="cred1Name"></span><span id="cred1Status"></span></li>
-      <li><span id="cred2Name"></span><span id="cred2Status"></span></li>
-      <li><span id="cred3Name"></span><span id="cred3Status"></span></li>
-    </ul>
+    <a href="testimonials.html" class="nav-card reveal-up delay-2">
+      <span class="nav-card-arrow">→</span>
+      <div class="nav-card-label">Testimonials</div>
+      <div class="nav-card-title">Results &<br/><em style="font-style:italic;color:var(--text-soft)">credentials.</em></div>
+      <div class="nav-card-overlay">
+        <p>What others had to say — and the credentials behind the work.</p>
+      </div>
+    </a>
+
   </div>
-</section>
+</div>
 
 <section id="contact" class="contact">
-  <div class="section-label reveal-up">06 / Begin</div>
+  <div class="section-label reveal-up">Begin</div>
   <h2 class="reveal-up delay-1" id="contactHeading"></h2>
   <div class="contact-methods">
     <div class="contact-method reveal-up delay-2">
@@ -1001,86 +121,28 @@ const SITE = {
   <div id="footerRight"></div>
 </footer>
 
+<script src="data.js"></script>
+<script src="site.js"></script>
 <script>
-  // Inject all SITE text into the page
-  const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-  const setHTML = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
+  initCommon();
 
-  setText('logo', SITE.brandShort);
   setText('metaLeft', SITE.metaLeft);
   setText('metaRight', SITE.metaRight);
 
-  // Marquee — repeats brand name 4 times
   const marqueeName = SITE.brandFull.replace('/', '<span class="slash">/</span>');
   document.getElementById('marqueeTrack').innerHTML =
-    `<span>${marqueeName}</span><span>${marqueeName}</span><span>${marqueeName}</span><span>${marqueeName}</span>`;
+    '<span>' + marqueeName + '</span><span>' + marqueeName + '</span><span>' + marqueeName + '</span><span>' + marqueeName + '</span>';
 
   setText('tagline', SITE.tagline);
   setText('ctaPrimary', SITE.ctaPrimary);
   setText('ctaSecondary', SITE.ctaSecondary);
 
-  setHTML('philosophyHeading', `${SITE.philosophyHeading} <em>${SITE.philosophyHeadingItalic}</em>`);
+  setHTML('philosophyHeading', SITE.philosophyHeading + ' <em>' + SITE.philosophyHeadingItalic + '</em>');
   setText('philosophyParagraph1', SITE.philosophyParagraph1);
   setText('philosophyParagraph2', SITE.philosophyParagraph2);
   setText('philosophyParagraph3', SITE.philosophyParagraph3);
 
-  setHTML('servicesHeading', `${SITE.servicesHeading} <em>${SITE.servicesHeadingItalic}</em>`);
-
-  for (let i = 1; i <= 4; i++) {
-    setText(`service${i}Title`, SITE[`service${i}Title`]);
-    setText(`service${i}Price`, SITE[`service${i}Price`]);
-    setText(`service${i}Desc`, SITE[`service${i}Desc`]);
-    const detailEl = document.getElementById(`service${i}Detail`);
-    if (detailEl) {
-      if (SITE[`service${i}Detail`]) {
-        detailEl.textContent = SITE[`service${i}Detail`];
-      } else {
-        detailEl.style.display = 'none';
-      }
-    }
-  }
-
-  setHTML('processHeading', `${SITE.processHeading} <em>${SITE.processHeadingItalic}</em>`);
-  setText('processIntro', SITE.processIntro);
-  for (let i = 1; i <= 4; i++) {
-    setText(`process${i}Number`, SITE[`process${i}Number`]);
-    setText(`process${i}Title`, SITE[`process${i}Title`]);
-    setText(`process${i}Body`, SITE[`process${i}Body`]);
-  }
-
-  setHTML('testimonialsHeading', `${SITE.testimonialsHeading} <em>${SITE.testimonialsHeadingItalic}</em>`);
-  for (let i = 1; i <= 4; i++) {
-    setText(`testimonial${i}Quote`, SITE[`testimonial${i}Quote`]);
-    setText(`testimonial${i}Cite`, SITE[`testimonial${i}Cite`]);
-  }
-
-  setHTML('credsHeading', `${SITE.credsHeading} <em>${SITE.credsHeadingItalic}</em>`);
-  setText('cred1Name', SITE.cred1Name);
-  setText('cred1Status', SITE.cred1Status);
-  setText('cred2Name', SITE.cred2Name);
-  setText('cred2Status', SITE.cred2Status);
-  setText('cred3Name', SITE.cred3Name);
-  setText('cred3Status', SITE.cred3Status);
-
-  setHTML('contactHeading', `${SITE.contactHeading} <em>${SITE.contactHeadingItalic}</em>`);
-  const wa = document.getElementById('whatsappLink');
-  wa.href = SITE.whatsappLink;
-  wa.textContent = SITE.whatsappNumber;
-  const ig = document.getElementById('instagramLink');
-  ig.href = SITE.instagramLink;
-  ig.textContent = SITE.instagramHandle;
-  setText('locationText', SITE.locationText);
-
-  setText('footerLeft', SITE.footerLeft);
-  setText('footerRight', SITE.footerRight);
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+  initReveal();
 </script>
 
 </body>
