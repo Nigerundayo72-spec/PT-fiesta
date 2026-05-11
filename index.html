@@ -4,16 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>F/F — Form Follows Function | Brandon Zhao Yi</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-
-<!--
-  TO EDIT TEXT ON THIS SITE: open data.js in any text editor.
-  Change the words inside the quotation marks, save, and refresh.
--->
 </head>
 <body data-page="home">
 
@@ -63,7 +57,7 @@
   </div>
 </section>
 
-<!-- Navigation cards — triangle layout: Book Now top, About + Testimonials below -->
+<!-- Navigation cards: Book Now on top, About Me + Testimonials below -->
 <div class="nav-cards-section">
   <div class="nav-cards">
 
@@ -97,23 +91,17 @@
   </div>
 </div>
 
+<!-- Featured client quote -->
+<section id="featuredTestimonial" class="featured-quote-section">
+  <div class="section-label reveal-up">Client voice</div>
+  <blockquote class="reveal-up delay-1" id="featuredQuoteText"></blockquote>
+  <cite class="reveal-up delay-2" id="featuredCiteText"></cite>
+</section>
+
 <section id="contact" class="contact">
   <div class="section-label reveal-up">Begin</div>
   <h2 class="reveal-up delay-1" id="contactHeading"></h2>
-  <div class="contact-methods">
-    <div class="contact-method reveal-up delay-2">
-      <div class="label">WhatsApp</div>
-      <a id="whatsappLink"></a>
-    </div>
-    <div class="contact-method reveal-up delay-3">
-      <div class="label">Instagram</div>
-      <a id="instagramLink" target="_blank"></a>
-    </div>
-    <div class="contact-method reveal-up delay-4">
-      <div class="label">Location</div>
-      <a id="locationText"></a>
-    </div>
-  </div>
+  <div class="contact-methods" id="contactMethods"></div>
 </section>
 
 <footer>
@@ -125,23 +113,7 @@
 <script src="site.js"></script>
 <script>
   initCommon();
-
-  setText('metaLeft', SITE.metaLeft);
-  setText('metaRight', SITE.metaRight);
-
-  const marqueeName = SITE.brandFull.replace('/', '<span class="slash">/</span>');
-  document.getElementById('marqueeTrack').innerHTML =
-    '<span>' + marqueeName + '</span><span>' + marqueeName + '</span><span>' + marqueeName + '</span><span>' + marqueeName + '</span>';
-
-  setText('tagline', SITE.tagline);
-  setText('ctaPrimary', SITE.ctaPrimary);
-  setText('ctaSecondary', SITE.ctaSecondary);
-
-  setHTML('philosophyHeading', SITE.philosophyHeading + ' <em>' + SITE.philosophyHeadingItalic + '</em>');
-  setText('philosophyParagraph1', SITE.philosophyParagraph1);
-  setText('philosophyParagraph2', SITE.philosophyParagraph2);
-  setText('philosophyParagraph3', SITE.philosophyParagraph3);
-
+  initHomePage();
   initReveal();
 </script>
 
