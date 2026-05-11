@@ -253,8 +253,8 @@ section {
 .section-headline {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.15;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.1;
   letter-spacing: -0.01em;
   margin-bottom: 2.5rem;
   color: var(--text);
@@ -452,6 +452,46 @@ section {
   max-width: 480px;
 }
 
+/* ── FEATURED QUOTE (landing page) ──────────────────── */
+.featured-quote-section {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featured-quote-section blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.featured-quote-section cite {
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* ── ABOUT INTRO (about page) ────────────────────────── */
+.about-intro-section {
+  padding: 5rem 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-intro-text {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 680px;
+  letter-spacing: 0.01em;
+}
+
 /* ── SERVICES (book now page) ────────────────────────── */
 .services-overview-section {
   padding: 5rem 2rem 2rem;
@@ -497,7 +537,7 @@ section {
 .service-card h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
-  font-size: 1.65rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--text);
 }
@@ -516,6 +556,7 @@ section {
   margin-bottom: auto;
   line-height: 1.75;
   letter-spacing: 0.01em;
+  max-width: 65ch;
 }
 
 .service-card .pack-detail {
@@ -545,17 +586,19 @@ section {
 }
 
 .btn-book {
-  display: block;
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 1.15rem 2rem;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--beige);
   color: #1a1a1a;
   font-family: 'Inter Tight', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
   border: 1px solid var(--beige);
   transition: background 0.25s, color 0.25s;
@@ -614,7 +657,7 @@ section {
 .process-step h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1.25rem;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -625,6 +668,7 @@ section {
   font-size: 0.97rem;
   line-height: 1.8;
   letter-spacing: 0.01em;
+  max-width: 65ch;
 }
 
 .process-step p strong {

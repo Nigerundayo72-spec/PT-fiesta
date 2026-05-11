@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Book Now — F/F | Brandon Zhao Yi</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -27,7 +26,7 @@
   <h1 class="reveal-up delay-1">Choose the structure that <em>fits your life.</em></h1>
 </div>
 
-<!-- Services overview — edit servicesOverview in data.js to fill this in -->
+<!-- Services overview — shown when servicesOverview is filled in data.js -->
 <div class="services-overview-section" id="servicesOverviewSection">
   <div class="section-label reveal-up">What I offer</div>
   <div class="services-overview-block reveal-up delay-1">
@@ -82,20 +81,7 @@
 <section id="contact" class="contact">
   <div class="section-label reveal-up">Begin</div>
   <h2 class="reveal-up delay-1" id="contactHeading"></h2>
-  <div class="contact-methods">
-    <div class="contact-method reveal-up delay-2">
-      <div class="label">WhatsApp</div>
-      <a id="whatsappLink"></a>
-    </div>
-    <div class="contact-method reveal-up delay-3">
-      <div class="label">Instagram</div>
-      <a id="instagramLink" target="_blank"></a>
-    </div>
-    <div class="contact-method reveal-up delay-4">
-      <div class="label">Location</div>
-      <a id="locationText"></a>
-    </div>
-  </div>
+  <div class="contact-methods" id="contactMethods"></div>
 </section>
 
 <footer>
@@ -107,47 +93,7 @@
 <script src="site.js"></script>
 <script>
   initCommon();
-
-  // Services overview — show placeholder if empty
-  var overviewEl = document.getElementById('servicesOverviewText');
-  if (overviewEl) {
-    if (SITE.servicesOverview) {
-      overviewEl.textContent = SITE.servicesOverview;
-    } else {
-      overviewEl.innerHTML = '<span class="services-overview-placeholder">Add a description of what you offer across the board — edit the servicesOverview field in data.js.</span>';
-    }
-  }
-
-  setHTML('servicesHeading', SITE.servicesHeading + ' <em>' + SITE.servicesHeadingItalic + '</em>');
-
-  // Inject service cards with detail as bullet list and booking button
-  var bookLabels = ['Book Trial Session', 'Book 4-Session Pack', 'Book 8-Session Pack', 'Start Online Coaching'];
-  for (var i = 1; i <= 4; i++) {
-    setText('service' + i + 'Title', SITE['service' + i + 'Title']);
-    setText('service' + i + 'Price', SITE['service' + i + 'Price']);
-    setText('service' + i + 'Desc', SITE['service' + i + 'Desc']);
-
-    var detail = SITE['service' + i + 'Detail'];
-    var detailEl = document.getElementById('service' + i + 'Detail');
-    if (detailEl) {
-      if (detail) {
-        var items = detail.split(' / ');
-        detailEl.innerHTML = '<ul class="pack-detail-list">' +
-          items.map(function(item) { return '<li>' + item + '</li>'; }).join('') +
-          '</ul>';
-      } else {
-        detailEl.style.display = 'none';
-      }
-    }
-
-    var bookEl = document.getElementById('service' + i + 'Book');
-    if (bookEl) {
-      var msg = encodeURIComponent("Hi Brandon, I'd like to enquire about the " + SITE['service' + i + 'Title'] + '.');
-      var waBase = SITE.whatsappLink.replace(/^https:\/\/wa\.me\//, 'https://wa.me/');
-      bookEl.innerHTML = '<a class="btn-book" href="' + waBase + '?text=' + msg + '" target="_blank">' + bookLabels[i - 1] + '</a>';
-    }
-  }
-
+  initBookPage();
   initReveal();
 </script>
 
