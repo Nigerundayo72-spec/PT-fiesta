@@ -36,13 +36,13 @@ const SITE = {
   brandShort: "F/F",
   brandFull: "Form / Function",
   metaLeft: "Form Follows Function — SG",
-  metaRight: "EST. 2024 / ACE-CPT",
+  metaRight: "EST. 2025 / ACE-CPT",
 
 
   // --------------------------------------------------------------------------
   // 2. HERO (landing page)
   // --------------------------------------------------------------------------
-  tagline: "Personal training built around your life, not the other way around. For people who find the gym intimidating, complicated, or hard to fit in. Sustainable strength for the long road.",
+  tagline: "Fitness is closer to you than you may realise, set aside 4 hours a week, and I'll prove it to you. Personal training that builds around life's stressors and commitments.",
   ctaPrimary: "Book a Trial Session",
   ctaSecondary: "Read the Philosophy",
 
@@ -65,7 +65,7 @@ const SITE = {
   // Keep it under 30 words for best impact.
   // Set featuredQuote to "" to hide this section entirely.
   // --------------------------------------------------------------------------
-  featuredQuote: "I've lost 18 kg, gained noticeable strength, and built a better relationship with my body.",
+  featuredQuote: "I've lost 25 kg, gained noticeable strength, and built a better relationship with my body.",
   featuredCite: "Steven, 23",
 
 
@@ -75,31 +75,30 @@ const SITE = {
   // you different. This is the personal section.
   // Set aboutIntro to "" to hide this section until you're ready.
   // --------------------------------------------------------------------------
-  aboutIntro: "",
+  aboutIntro:"The gym to me, when I first began at about 15 years old used to function as an emotional outlet for my angst and ego, more than a source of genuine growth. Naturally, this led to me spending the first few years in the gym lifting weights my body was not yet prepared for. A few years, and more than a few injuries onwards, I wish I had approached the gym with the mindset that I hold today. Where the gym is a place for growth and restoration of freedom of movement. As such, I felt that the role of a trainer was a meaningful one to me, where I am able to introduce everything I love about physical training to others, while also being able to educate and guide them away from the ways I misused the gym. It might sound cliche, but to me, it is as simple as maximising the benefits and minimising the costs of training. ",
 
 
   // --------------------------------------------------------------------------
   // 6. PROCESS STEPS (about page)
   // --------------------------------------------------------------------------
-  processHeading: "How the magic",
-  processHeadingItalic: "happens.",
+  processHeading: "How the magic happens",
   processIntro: "Every programme is written from scratch with information from trials.",
 
   process1Number: "01",
   process1Title: "Can you move?",
-  process1Body: "We start by understanding what your body can and cannot do right now. Joint mobility, postural patterns, movement compensations, history of injuries.",
+  process1Body: "We start by understanding what your body can and cannot do right now, and we build up to the things you cannot do yet.",
 
   process2Number: "02",
-  process2Title: "Does it hurt when you do this?",
-  process2Body: "If something hurts, we sort it before we add load. If you're paying me, you best be living better for it.",
+  process2Title: "Why does this part hurt?",
+  process2Body: "If something hurts, we sort it out before we add load. If you're paying me, you best be living better for it.",
 
   process3Number: "03",
-  process3Title: "How well can you do this?",
-  process3Body: "Once the pain is managed, we will focus on movement quality.",
+  process3Title: "How well are you able to do this?",
+  process3Body: "Once the pain is managed, we will focus on the quality of your movements.",
 
   process4Number: "04",
   process4Title: "How hard and fast can you do this?",
-  process4Body: "At this point you have earned the right to train hard. This is where the fun part begins.",
+  process4Body: "At this point you have earned the right to train hard. This is where the fun is.",
 
 
   // --------------------------------------------------------------------------
@@ -112,30 +111,27 @@ const SITE = {
   // Separate items with " / " — e.g. "Item one / Item two / Item three"
   // Leave as "" for no detail list.
   // --------------------------------------------------------------------------
-  servicesOverview: "",
+  servicesOverview: "Across all packages, you can be guaranteed a personalised program built from the ground up and updated biweekly to ensure progressive overload/ guidance on form and technique/ regular checkins on stress levels/ optional nutritional and recovery guidance/ and a friend, if that's what you'd like.",
 
   servicesHeading: "Choose the structure that",
-  servicesHeadingItalic: "fits your life.",
+  servicesHeadingItalic: "works for you.",
 
   service1Title: "Trial Session",
   service1Price: "SGD 20",
   service1Desc: "A first session to conduct assessments, try a workout together, and for you to see if you like how I run things.",
-  service1Detail: "",
 
   service2Title: "4-Session Pack",
   service2Price: "SGD 360 / SGD 90 per 1.5 hour session",
   service2Desc: "In-person training at ActiveSG, or any private gym. Recommended for new clients. Valid for 6 weeks.",
-  service2Detail: "",
 
   service3Title: "8-Session Pack",
   service3Price: "SGD 640 / SGD 80 per session",
   service3Desc: "In-person training at ActiveSG, or any private gym. Recommended for those with more certainty. Valid for 12 weeks.",
-  service3Detail: "",
 
   service4Title: "Online Coaching",
   service4Price: "SGD 100 per month",
   service4Desc: "Custom programming, weekly check-ins, form video reviews. For those who train independently but want expert structure and accountability.",
-  service4Detail: "Tailored programme / WhatsApp support / Monthly review call",
+  service4Detail: "Online support / Bi-monthly review call",
 
 
   // --------------------------------------------------------------------------
@@ -144,7 +140,7 @@ const SITE = {
   testimonialsHeading: "The work, in",
   testimonialsHeadingItalic: "their words.",
 
-  testimonial1Quote: "The experience has been transformational for my own physical health. Brandon took the time to understand my goals and created a structured plan that was effective, sustainable, and enjoyable. I've lost 18 kg, gained noticeable strength, and built a better relationship with my body.",
+  testimonial1Quote: "The experience has been transformational for my own physical health. Brandon took the time to understand my goals and created a structured plan that was effective, sustainable, and enjoyable. I've lost 25 kg, gained noticeable strength, and built a better relationship with my body.",
   testimonial1Cite: "Steven, 23, beginner in the gym",
 
   testimonial2Quote: "He demonstrates a nuanced understanding of the female body and approaches each session with professionalism. He pushes me to make meaningful progress while remaining aware of my individual limits. His thoughtful approach has had real impact on my physical strength and overall quality of life.",
@@ -168,12 +164,6 @@ const SITE = {
   cred1Name: "ACE Certified Personal Trainer",
   cred1Status: "Current",
 
-  cred2Name: "Strength Systems Certification",
-  cred2Status: "Coming soon",
-
-  cred3Name: "Specialisation, Training the Elderly",
-  cred3Status: "Coming soon",
-
 
   // --------------------------------------------------------------------------
   // 10. CONTACT (appears on every page)
@@ -184,13 +174,11 @@ const SITE = {
   // emailLink format: "mailto:your@email.com"
   // --------------------------------------------------------------------------
   contactHeading: "Drop me a text.",
-  contactHeadingItalic: "Shall we begin?",
 
   whatsappNumber: "+65 8950 8470",
   whatsappLink: "https://wa.me/6589508470",
 
-  email: "",
-  emailLink: "",
+  email: "brandonyzhao05@gmail.com",
 
   instagramHandle: "@dogs_are_very_neat",
   instagramLink: "https://instagram.com/dogs_are_very_neat",
