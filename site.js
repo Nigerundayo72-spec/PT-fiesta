@@ -23,7 +23,7 @@ function initCommon() {
   setText('logo', SITE.brandShort);
 
   // Contact heading
-  setHTML('contactHeading', SITE.contactHeading + ' <em>' + SITE.contactHeadingItalic + '</em>');
+  setText('contactHeading', SITE.contactHeading + ' ' + SITE.contactHeadingItalic);
 
   // Build contact methods from data.js — add/remove fields there, not here
   var contactEl = document.getElementById('contactMethods');
@@ -90,7 +90,7 @@ function initHomePage() {
   setText('ctaSecondary', SITE.ctaSecondary);
 
   // Philosophy
-  setHTML('philosophyHeading', SITE.philosophyHeading + ' <em>' + SITE.philosophyHeadingItalic + '</em>');
+  setText('philosophyHeading', SITE.philosophyHeading + ' ' + SITE.philosophyHeadingItalic);
   setText('philosophyParagraph1', SITE.philosophyParagraph1);
   setText('philosophyParagraph2', SITE.philosophyParagraph2);
   setText('philosophyParagraph3', SITE.philosophyParagraph3);
@@ -138,7 +138,7 @@ function initAboutPage() {
     if (!hasAny) {
       articlesSection.style.display = 'none';
     } else {
-      setHTML('articlesHeading', SITE.articlesHeading + ' <em>' + SITE.articlesHeadingItalic + '</em>');
+      setText('articlesHeading', SITE.articlesHeading + ' ' + SITE.articlesHeadingItalic);
 
       // Featured articles 1-3: alternating image/text layout
       var featuredEl = document.getElementById('articlesFeatured');
@@ -198,7 +198,7 @@ function initAboutPage() {
   }
 
   // Process section
-  setHTML('processHeading', SITE.processHeading + ' <em>' + SITE.processHeadingItalic + '</em>');
+  setText('processHeading', SITE.processHeading + ' ' + SITE.processHeadingItalic);
   setText('processIntro', SITE.processIntro);
 
   for (var i = 1; i <= 4; i++) {
@@ -232,7 +232,7 @@ function initBookPage() {
     }
   }
 
-  setHTML('servicesHeading', SITE.servicesHeading + ' <em>' + SITE.servicesHeadingItalic + '</em>');
+  setText('servicesHeading', SITE.servicesHeading + ' ' + SITE.servicesHeadingItalic);
 
   var bookLabels = [
     'Book Trial Session',
@@ -273,14 +273,14 @@ function initBookPage() {
 // --- Testimonials page -------------------------------------------------------
 
 function initTestimonialsPage() {
-  setHTML('testimonialsHeading', SITE.testimonialsHeading + ' <em>' + SITE.testimonialsHeadingItalic + '</em>');
+  setText('testimonialsHeading', SITE.testimonialsHeading + ' ' + SITE.testimonialsHeadingItalic);
 
   for (var i = 1; i <= 4; i++) {
     setText('testimonial' + i + 'Quote', SITE['testimonial' + i + 'Quote']);
     setText('testimonial' + i + 'Cite',  SITE['testimonial' + i + 'Cite']);
   }
 
-  setHTML('credsHeading', SITE.credsHeading + ' <em>' + SITE.credsHeadingItalic + '</em>');
+  setText('credsHeading', SITE.credsHeading + ' ' + SITE.credsHeadingItalic);
   for (var j = 1; j <= 3; j++) {
     setText('cred' + j + 'Name',   SITE['cred' + j + 'Name']);
     setText('cred' + j + 'Status', SITE['cred' + j + 'Status']);

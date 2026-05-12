@@ -127,31 +127,31 @@ const SITE = {
   articlesHeading: "Ideas on training,",
   articlesHeadingItalic: "in long form.",
 
-  substackLink: "",
+  substackLink: "https://substack.com",
 
-  article1Title: "",
-  article1Excerpt: "",
-  article1Link: "",
+  article1Title: "On showing up when it doesn't feel like it",
+  article1Excerpt: "The hardest training sessions are rarely the ones that test your body. They are the ones that test whether you will even begin. A few thoughts on motivation, routine, and what separates people who stay from people who quit.",
+  article1Link: "https://substack.com",
 
-  article2Title: "",
-  article2Excerpt: "",
-  article2Link: "",
+  article2Title: "What the gym actually teaches you",
+  article2Excerpt: "Everyone comes in for the body. Most stay for something else. Training consistently over years does something to your relationship with difficulty and with yourself that is hard to explain until you have lived it.",
+  article2Link: "https://substack.com",
 
-  article3Title: "",
-  article3Excerpt: "",
-  article3Link: "",
+  article3Title: "Ego and the beginner's mind",
+  article3Excerpt: "The thing that keeps most people from getting better is not lack of effort. It is an unwillingness to look like a beginner. A reflection on ego, embarrassment, and why starting over is always the fastest way forward.",
+  article3Link: "https://substack.com",
 
-  article4Title: "",
-  article4Excerpt: "",
-  article4Link: "",
+  article4Title: "Why boring training works",
+  article4Excerpt: "Consistency with a simple plan beats variety with a complicated one, every time.",
+  article4Link: "https://substack.com",
 
-  article5Title: "",
-  article5Excerpt: "",
-  article5Link: "",
+  article5Title: "The case for doing less",
+  article5Excerpt: "More volume is not always the answer. Sometimes the recovery is where the work happens.",
+  article5Link: "https://substack.com",
 
-  article6Title: "",
-  article6Excerpt: "",
-  article6Link: "",
+  article6Title: "Strength is not a number",
+  article6Excerpt: "What it really means to be strong, and why the barbell is just the beginning of the conversation.",
+  article6Link: "https://substack.com",
 
 
   // --------------------------------------------------------------------------
