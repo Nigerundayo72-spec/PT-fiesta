@@ -108,6 +108,36 @@ function initHomePage() {
 }
 
 
+// --- Articles drum (cylinder scroll effect) ----------------------------------
+
+function initArticlesDrum(viewport, track) {
+  var items = track.querySelectorAll('.article-drum-item');
+  var ITEM_H = 130; // must match CSS height
+  var PAD_H  = 135; // must match .article-drum-pad height
+
+  function update() {
+    var vpRect  = viewport.getBoundingClientRect();
+    var centerY = vpRect.top + vpRect.height / 2;
+    items.forEach(function(item) {
+      var rect      = item.getBoundingClientRect();
+      var itemCY    = rect.top + rect.height / 2;
+      var dist      = itemCY - centerY;
+      var maxDist   = vpRect.height * 0.55;
+      var t         = Math.max(-1, Math.min(1, dist / maxDist));
+      var angle     = t * 52;
+      var opacity   = Math.max(0.08, 1 - Math.abs(t) * 0.85);
+      item.style.transform = 'perspective(800px) rotateX(' + angle + 'deg)';
+      item.style.opacity   = opacity;
+    });
+  }
+
+  track.addEventListener('scroll', update, { passive: true });
+  // Also update when page scrolls (drum may not be in view yet on load)
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+
 // --- About page --------------------------------------------------------------
 
 function initAboutPage() {
@@ -140,49 +170,25 @@ function initAboutPage() {
     } else {
       setText('articlesHeading', SITE.articlesHeading + ' ' + SITE.articlesHeadingItalic);
 
-      // Featured articles 1-3: alternating image/text layout
-      var featuredEl = document.getElementById('articlesFeatured');
-      if (featuredEl) {
-        var html = '';
-        for (var f = 1; f <= 3; f++) {
-          var t = SITE['article' + f + 'Title'];
-          var e = SITE['article' + f + 'Excerpt'];
-          var l = SITE['article' + f + 'Link'];
-          if (!t) continue;
-          html += '<div class="article-featured reveal-up">'
-            + '<div class="article-featured-image"><div class="image-placeholder">ARTICLE IMAGE ' + f + '</div></div>'
-            + '<div class="article-featured-text">'
-            + '<h3>' + t + '</h3>'
-            + (e ? '<p>' + e + '</p>' : '')
-            + (l ? '<a class="article-read-link" href="' + l + '" target="_blank">Read on Substack <span>→</span></a>' : '')
-            + '</div>'
-            + '</div>';
-        }
-        featuredEl.innerHTML = html;
-      }
-
-      // Archive articles 4-6: compact scrollable list
-      var archiveWrapper = document.getElementById('articlesArchiveWrapper');
-      if (archiveWrapper) {
-        var archiveHTML = '';
-        for (var a = 4; a <= 6; a++) {
-          var at = SITE['article' + a + 'Title'];
-          var ae = SITE['article' + a + 'Excerpt'];
-          var al = SITE['article' + a + 'Link'];
-          if (!at) continue;
-          var tag = al ? 'a' : 'div';
-          var attrs = al ? ' href="' + al + '" target="_blank"' : '';
-          archiveHTML += '<' + tag + ' class="article-archive-item"' + attrs + '>'
-            + '<span class="article-archive-title">' + at + '</span>'
-            + (ae ? '<span class="article-archive-excerpt">' + ae + '</span>' : '')
-            + '<span class="article-archive-arrow">→</span>'
+      // Drum scroller — all articles 1-6 rendered as drum items
+      var drumTrack = document.getElementById('articlesDrumTrack');
+      if (drumTrack) {
+        var drumHTML = '<div class="article-drum-pad"></div>';
+        for (var d = 1; d <= 6; d++) {
+          var dt = SITE['article' + d + 'Title'];
+          var de = SITE['article' + d + 'Excerpt'];
+          var dl = SITE['article' + d + 'Link'];
+          if (!dt) continue;
+          var tag = dl ? 'a' : 'div';
+          var attrs = dl ? ' href="' + dl + '" target="_blank"' : '';
+          drumHTML += '<' + tag + ' class="article-drum-item"' + attrs + '>'
+            + '<div class="article-drum-title">' + dt + '</div>'
+            + (de ? '<div class="article-drum-excerpt">' + de + '</div>' : '')
             + '</' + tag + '>';
         }
-        if (archiveHTML) {
-          document.getElementById('articlesArchive').innerHTML = archiveHTML;
-        } else {
-          archiveWrapper.style.display = 'none';
-        }
+        drumHTML += '<div class="article-drum-pad"></div>';
+        drumTrack.innerHTML = drumHTML;
+        initArticlesDrum(document.getElementById('articlesDrum'), drumTrack);
       }
 
       // Substack link
