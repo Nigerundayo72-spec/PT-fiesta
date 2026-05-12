@@ -124,13 +124,13 @@ const SITE = {
   // Set to "" to hide that button.
   // --------------------------------------------------------------------------
   articlesHeading: "Ideas on training,",
-  articlesHeadingItalic: "in long form.",
-
+  articlesHeadingItalic: "in long form", 
+    
   substackLink: "https://substack.com",
 
-  article1Title: "On showing up when it doesn't feel like it",
-  article1Excerpt: "The hardest training sessions are rarely the ones that test your body. They are the ones that test whether you will even begin. A few thoughts on motivation, routine, and what separates people who stay from people who quit.",
-  article1Link: "https://substack.com",
+  article1Title: "Why form follows function in greater detail",
+  article1Excerpt: "What is meant by form? What is referred to as function? What does this have to do with making gains in the gym?",
+  article1Link: "https://open.substack.com/pub/brandonzhao1/p/why-form-follows-function?r=8e556x&utm_medium=ios",
 
   article2Title: "What the gym actually teaches you",
   article2Excerpt: "Everyone comes in for the body. Most stay for something else. Training consistently over years does something to your relationship with difficulty and with yourself that is hard to explain until you have lived it.",
