@@ -102,6 +102,58 @@ const SITE = {
 
 
   // --------------------------------------------------------------------------
+  // 7a. HOBBIES (about page — brief personal section)
+  // A short line about you outside of training. Keep it natural.
+  // Set to "" to hide this section.
+  // --------------------------------------------------------------------------
+  hobbies: "Outside of training, I do Brazilian Jiu-Jitsu, paint Warhammer miniatures, write, and spend time with my dog. The common thread in all of it: show up, do the work, and trust that you will get better.",
+
+
+  // --------------------------------------------------------------------------
+  // 7b. ARTICLES (about page — links to your Substack)
+  // Articles 1-3 appear as large featured posts (alternating image/text layout).
+  // Articles 4 and above appear in a scrollable archive list below them.
+  // Leave any articleN fields as "" to hide that article.
+  //
+  // HOW TO ADD AN ARTICLE:
+  //   1. Copy an article block below.
+  //   2. Fill in the title, a 2-3 sentence excerpt, and paste the Substack URL.
+  //   3. Save and refresh.
+  //
+  // substackLink: your Substack homepage URL — shown as "Read all on Substack".
+  // Set to "" to hide that button.
+  // --------------------------------------------------------------------------
+  articlesHeading: "Ideas on training,",
+  articlesHeadingItalic: "in long form.",
+
+  substackLink: "",
+
+  article1Title: "",
+  article1Excerpt: "",
+  article1Link: "",
+
+  article2Title: "",
+  article2Excerpt: "",
+  article2Link: "",
+
+  article3Title: "",
+  article3Excerpt: "",
+  article3Link: "",
+
+  article4Title: "",
+  article4Excerpt: "",
+  article4Link: "",
+
+  article5Title: "",
+  article5Excerpt: "",
+  article5Link: "",
+
+  article6Title: "",
+  article6Excerpt: "",
+  article6Link: "",
+
+
+  // --------------------------------------------------------------------------
   // 7. SERVICES / PACKAGES (book now page)
   // servicesOverview: a short paragraph at the top of the page explaining
   // session duration, what to expect, and how to choose a package.
