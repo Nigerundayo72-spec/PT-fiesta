@@ -709,8 +709,9 @@ section {
   height: 130px;
   scroll-snap-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
   padding: 0 3rem;
   text-decoration: none;
   color: var(--text);
@@ -718,6 +719,11 @@ section {
   will-change: transform, opacity;
   transition: opacity 0.06s linear;
   cursor: pointer;
+}
+
+.article-drum-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .article-drum-title {
@@ -735,10 +741,26 @@ section {
   color: var(--text-muted);
   margin-top: 0.35rem;
   line-height: 1.5;
-  max-width: 64ch;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.article-drum-image {
+  width: 160px;
+  flex-shrink: 0;
+  aspect-ratio: 4/3;
+  background: var(--bg-alt);
+  border: 1px solid var(--beige-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  overflow: hidden;
 }
 
 /* "Read all on Substack" link */
@@ -1099,9 +1121,10 @@ footer {
   /* Articles drum mobile */
   .articles-section { padding: 4rem 1.25rem; }
   .articles-drum-viewport { height: 340px; }
-  .article-drum-item { padding: 0 1rem; }
+  .article-drum-item { padding: 0 1rem; gap: 1rem; }
   .article-drum-title { font-size: 1.25rem; }
   .article-drum-excerpt { display: none; }
+  .article-drum-image { display: none; }
 
   /* Hobbies mobile */
   .hobbies-section { padding: 3rem 1.25rem 0; }
