@@ -111,13 +111,89 @@ function initHomePage() {
 // --- About page --------------------------------------------------------------
 
 function initAboutPage() {
-  // Personal intro — hidden automatically if aboutIntro is "" in data.js
+  // Personal intro — hidden if aboutIntro is "" in data.js
   var introSection = document.getElementById('aboutIntroSection');
   if (introSection) {
     if (SITE.aboutIntro) {
       setText('aboutIntroText', SITE.aboutIntro);
     } else {
       introSection.style.display = 'none';
+    }
+  }
+
+  // Hobbies — hidden if hobbies is "" in data.js
+  var hobbiesSection = document.getElementById('hobbiesSection');
+  if (hobbiesSection) {
+    if (SITE.hobbies) {
+      setText('hobbiesText', SITE.hobbies);
+    } else {
+      hobbiesSection.style.display = 'none';
+    }
+  }
+
+  // Articles — hidden if no articles are filled in data.js
+  var articlesSection = document.getElementById('articlesSection');
+  if (articlesSection) {
+    var hasAny = SITE.article1Title || SITE.article2Title || SITE.article3Title;
+    if (!hasAny) {
+      articlesSection.style.display = 'none';
+    } else {
+      setHTML('articlesHeading', SITE.articlesHeading + ' <em>' + SITE.articlesHeadingItalic + '</em>');
+
+      // Featured articles 1-3: alternating image/text layout
+      var featuredEl = document.getElementById('articlesFeatured');
+      if (featuredEl) {
+        var html = '';
+        for (var f = 1; f <= 3; f++) {
+          var t = SITE['article' + f + 'Title'];
+          var e = SITE['article' + f + 'Excerpt'];
+          var l = SITE['article' + f + 'Link'];
+          if (!t) continue;
+          html += '<div class="article-featured reveal-up">'
+            + '<div class="article-featured-image"><div class="image-placeholder">ARTICLE IMAGE ' + f + '</div></div>'
+            + '<div class="article-featured-text">'
+            + '<h3>' + t + '</h3>'
+            + (e ? '<p>' + e + '</p>' : '')
+            + (l ? '<a class="article-read-link" href="' + l + '" target="_blank">Read on Substack <span>→</span></a>' : '')
+            + '</div>'
+            + '</div>';
+        }
+        featuredEl.innerHTML = html;
+      }
+
+      // Archive articles 4-6: compact scrollable list
+      var archiveWrapper = document.getElementById('articlesArchiveWrapper');
+      if (archiveWrapper) {
+        var archiveHTML = '';
+        for (var a = 4; a <= 6; a++) {
+          var at = SITE['article' + a + 'Title'];
+          var ae = SITE['article' + a + 'Excerpt'];
+          var al = SITE['article' + a + 'Link'];
+          if (!at) continue;
+          var tag = al ? 'a' : 'div';
+          var attrs = al ? ' href="' + al + '" target="_blank"' : '';
+          archiveHTML += '<' + tag + ' class="article-archive-item"' + attrs + '>'
+            + '<span class="article-archive-title">' + at + '</span>'
+            + (ae ? '<span class="article-archive-excerpt">' + ae + '</span>' : '')
+            + '<span class="article-archive-arrow">→</span>'
+            + '</' + tag + '>';
+        }
+        if (archiveHTML) {
+          document.getElementById('articlesArchive').innerHTML = archiveHTML;
+        } else {
+          archiveWrapper.style.display = 'none';
+        }
+      }
+
+      // Substack link
+      var substackEl = document.getElementById('articlesSubstack');
+      if (substackEl) {
+        if (SITE.substackLink) {
+          substackEl.innerHTML = '<a href="' + SITE.substackLink + '" target="_blank">Read all on Substack →</a>';
+        } else {
+          substackEl.style.display = 'none';
+        }
+      }
     }
   }
 
