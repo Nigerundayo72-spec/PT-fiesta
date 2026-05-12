@@ -182,8 +182,11 @@ function initAboutPage() {
           var tag = dl ? 'a' : 'div';
           var attrs = dl ? ' href="' + dl + '" target="_blank"' : '';
           drumHTML += '<' + tag + ' class="article-drum-item"' + attrs + '>'
+            + '<div class="article-drum-content">'
             + '<div class="article-drum-title">' + dt + '</div>'
             + (de ? '<div class="article-drum-excerpt">' + de + '</div>' : '')
+            + '</div>'
+            + '<div class="article-drum-image">Image</div>'
             + '</' + tag + '>';
         }
         drumHTML += '<div class="article-drum-pad"></div>';
