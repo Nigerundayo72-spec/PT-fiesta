@@ -124,7 +124,7 @@ function initArticlesDrum(viewport, track) {
       var dist      = itemCY - centerY;
       var maxDist   = vpRect.height * 0.55;
       var t         = Math.max(-1, Math.min(1, dist / maxDist));
-      var angle     = t * 52;
+      var angle     = -t * 52;
       var opacity   = Math.max(0.08, 1 - Math.abs(t) * 0.85);
       item.style.transform = 'perspective(800px) rotateX(' + angle + 'deg)';
       item.style.opacity   = opacity;
