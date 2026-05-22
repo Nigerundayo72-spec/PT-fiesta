@@ -144,7 +144,7 @@ nav {
 }
 
 .marquee-track .slash {
-  font-style: italic;
+  font-weight: 300;
   color: var(--text-soft);
 }
 
@@ -254,7 +254,8 @@ section {
 }
 
 .page-hero h1 em {
-  font-style: italic;
+  font-weight: 300;
+  color: var(--text-soft);
   color: var(--text-soft);
 }
 
@@ -279,7 +280,7 @@ section {
 
 .philosophy-text h2 em,
 .section-headline em {
-  font-style: italic;
+  font-weight: 300;
   color: var(--text-soft);
 }
 
@@ -423,7 +424,7 @@ section {
 }
 
 .nav-card-title em {
-  font-style: italic;
+  font-weight: 300;
   color: var(--text-muted);
   text-transform: none;
   letter-spacing: 0.02em;
@@ -461,12 +462,12 @@ section {
 }
 
 .nav-card-overlay p {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
   color: var(--text-soft);
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 480px;
+  letter-spacing: 0.01em;
 }
 
 /* ── FEATURED QUOTE (landing page) ──────────────────── */
@@ -480,10 +481,24 @@ section {
 .featured-quote-section blockquote {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  font-style: italic;
+  font-weight: 300;
   line-height: 1.55;
   color: var(--text);
   margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.featured-quote-section blockquote::before {
+  content: '\201C';
+  position: absolute;
+  left: 0;
+  top: -0.2em;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--beige);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
 }
 
 .featured-quote-section cite {
@@ -530,9 +545,9 @@ section {
 }
 
 .services-overview-placeholder {
-  font-style: italic;
   color: var(--text-muted);
   font-size: 0.9rem;
+  letter-spacing: 0.02em;
 }
 
 .services-grid {
@@ -560,11 +575,13 @@ section {
 }
 
 .service-card .price {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  color: var(--text-soft);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--beige);
   margin-bottom: 1.5rem;
-  font-size: 1.05rem;
 }
 
 .service-card p {
@@ -635,11 +652,10 @@ section {
 }
 
 .hobbies-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
   color: var(--text-soft);
-  line-height: 1.75;
+  line-height: 1.85;
   max-width: 640px;
   letter-spacing: 0.01em;
 }
@@ -821,11 +837,11 @@ section {
 }
 
 .process-step .number {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  letter-spacing: 0.1em;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  color: var(--beige);
+  letter-spacing: 0.2em;
   margin-bottom: 1.5rem;
 }
 
@@ -878,12 +894,24 @@ section {
 
 .testimonial blockquote {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: var(--text);
-  font-style: italic;
+  position: relative;
+  padding-left: 0;
+}
+
+.testimonial blockquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 3rem;
+  line-height: 0.8;
+  margin-bottom: 0.5rem;
+  color: var(--beige);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
 }
 
 .testimonial cite {
@@ -943,7 +971,7 @@ section {
 }
 
 .contact h2 em {
-  font-style: italic;
+  font-weight: 300;
   color: var(--text-soft);
 }
 
