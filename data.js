@@ -75,13 +75,13 @@ const SITE = {
   // you different. This is the personal section.
   // Set aboutIntro to "" to hide this section until you're ready.
   // --------------------------------------------------------------------------
-  aboutIntro:"The gym to me, when I first began at about 15 years old used to function as an emotional outlet for my angst and ego, more than a source of genuine growth. Naturally, this led to me spending the first few years in the gym lifting weights my body was not yet prepared for. A few years, and more than a few injuries onwards, I wish I had approached the gym with the mindset that I hold today. Where the gym is a place for growth and restoration of freedom of movement. As such, I felt that the role of a trainer was a meaningful one to me, where I am able to introduce everything I love about physical training to others, while also being able to educate and guide them away from the ways I misused the gym. It might sound cliche, but to me, it is as simple as maximising the benefits and minimising the costs of training. ",
+  aboutIntro:"When I first began lifting at about 15 years old, the gymused to function as an emotional outlet for me, more than a source of genuine growth. Naturally, this led to me spending the first few years in the gym irresponsibly, lifting weights my body was not yet prepared for. A few years, and more than a few injuries onwards, I wish I had approached the gym with the mindset that I hold today. Where the gym is viewed as a place for growth and restoration of freedom of movement. As such, I was drawn to personal training, where I am able to introduce everything I love about physical training to others, while also being able to educate and guide them away from the ways I misused the gym. It might sound cliche, but to me, it is as simple as maximising the benefits and minimising the costs of training. ",
 
 
   // --------------------------------------------------------------------------
   // 6. PROCESS STEPS (about page)
   // --------------------------------------------------------------------------
-  processHeading: "How the magic happens",
+  processHeading: "The thought process",
   processIntro: "Every programme is written from scratch with information from trials.",
 
   process1Number: "01",
@@ -106,7 +106,7 @@ const SITE = {
   // A short line about you outside of training. Keep it natural.
   // Set to "" to hide this section.
   // --------------------------------------------------------------------------
-  hobbies: "Outside of training, I do Brazilian Jiu-Jitsu, paint Warhammer miniatures, write, and spend time with my dog. The common thread in all of it: show up, do the work, and trust that you will get better.",
+  hobbies: "Outside of the gym, I spend most of my time doing Brazilian Jiu Jitsu, paint warhammer minifigures, write and spend time with my dog, Eski.",
 
 
   // --------------------------------------------------------------------------
@@ -165,8 +165,7 @@ const SITE = {
   // --------------------------------------------------------------------------
   servicesOverview: "Across all packages, you can be guaranteed a personalised program built from the ground up and updated biweekly to ensure progressive overload/ guidance on form and technique/ regular checkins on stress levels/ optional nutritional and recovery guidance/ and a friend, if that's what you'd like.",
 
-  servicesHeading: "Choose the structure that",
-  servicesHeadingItalic: "works for you.",
+  servicesHeading: "Choose your structure",
 
   service1Title: "Trial Session",
   service1Price: "SGD 20",
